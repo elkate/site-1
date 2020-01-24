@@ -1,0 +1,31 @@
+.social {
+  display: flex;
+  margin-left: -10px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  margin-left: 10px;
+
+  &--fb {
+    background: #3B5998;
+  }
+
+  &--vk {
+    background: #4C6C91;
+  }
+
+  &--ig {
+    background: #F9FAFE;
+  }
+
+  &--yt {
+    background: #FF0000;
+  }
+
+}

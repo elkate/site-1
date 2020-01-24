@@ -1,0 +1,26 @@
+.auth {
+  padding: 16px 0;
+}
+
+.auth__link {
+  position: relative;
+  font-size: 14px;
+  line-height: 120%;
+  color: #A6A7B1;
+  border-bottom: 1px solid #A6A7B1;
+  text-decoration: none;
+
+  &:first-child {
+    margin-right: 20px;
+  }
+
+  &:not(:first-child)::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -11px;
+    height: 100%;
+    width: 1px;
+    background:  #A6A7B1;
+  }
+}
