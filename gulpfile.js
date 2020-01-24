@@ -12,7 +12,7 @@ var rename = require("gulp-rename");
 var rigger = require("gulp-rigger");
 
 gulp.task("clean", function () {
-    return del("build");
+    return del("docs");
 });
 
 gulp.task("css", function () {
@@ -23,7 +23,7 @@ gulp.task("css", function () {
             autoprefixer()
         ]))
         .pipe(minify())
-        .pipe(gulp.dest("build/styles"))
+        .pipe(gulp.dest("docs/styles"))
         .pipe(server.stream());
 });
 
@@ -34,7 +34,7 @@ gulp.task("css", function () {
 
 gulp.task("img", function () {
     return gulp.src("src/img/*")
-        .pipe(gulp.dest("build/img"))
+        .pipe(gulp.dest("docs/img"))
 });
 
 // gulp.task("svg", function () {
@@ -50,19 +50,19 @@ gulp.task('html', function() {
     return gulp
         .src("src/*.html")
         .pipe(rigger())
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('docs'))
 });
 
 gulp.task('js', function() {
     return gulp
         .src("src/js/*.js")
-        .pipe(gulp.dest("build/js"))
+        .pipe(gulp.dest("docs/js"))
 });
 
 
 gulp.task("server", function () {
     server.init({
-        server: "build/",
+        server: "docs/",
         notify: false,
         open: true,
         cors: true,
